@@ -1,0 +1,151 @@
+:root {
+  --primary: #6366f1;
+  --primary-light: #eef2ff;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e5e7eb;
+  --danger: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ===== APP LAYOUT ===== */
+.app {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  height: 100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  background: var(--card);
+  border-right: 1px solid var(--border);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.sidebar input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.sidebar button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.generate {
+  background: var(--primary);
+  color: white;
+}
+
+.clear {
+  background: var(--danger);
+  color: white;
+}
+
+.email-box {
+  background: var(--primary-light);
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: 60px 1fr;
+}
+
+.header {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.inbox {
+  background: var(--card);
+  border-radius: 12px;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+}
+
+.inbox-item {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.inbox-item:hover {
+  background: var(--primary-light);
+}
+
+.inbox-item.active {
+  background: var(--primary-light);
+  border-left: 4px solid var(--primary);
+}
+
+.inbox-item small {
+  color: var(--muted);
+}
+
+.message {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.message-header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.message-body {
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+.empty {
+  color: var(--muted);
+  text-align: center;
+  margin-top: 50px;
+}

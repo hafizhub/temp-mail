@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TempMail Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="logo">📧 TempMail Pro</div>
+
+      <input id="username" placeholder="Enter username">
+      <button class="generate" id="gen-btn">Generate Email</button>
+
+      <div class="email-box" id="display-mail">No email</div>
+      <button class="clear" id="clear-mail">Clear</button>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <div class="header">Temporary Inbox</div>
+
+      <div class="content">
+
+        <!-- INBOX -->
+        <div class="inbox" id="inbox">
+          <div class="empty">No messages</div>
+        </div>
+
+        <!-- MESSAGE -->
+        <div class="message">
+          <div class="message-header" id="msg-header">
+            Select a message
+          </div>
+          <div class="message-body" id="msg-body"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
